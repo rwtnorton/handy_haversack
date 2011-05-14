@@ -75,10 +75,10 @@ describe ItemsController do
         response.should be_success
       end
 
-#      it "should list items" do
-#        get :index
-#        response.should have_selector('ul#items')
-#      end
+      it "should list items" do
+        get :index
+        response.should have_selector('ul#items')
+      end
     end
 
     describe "GET 'edit'" do
