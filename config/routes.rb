@@ -1,17 +1,5 @@
 HandyHaversack::Application.routes.draw do
-  get "items/new"
-
-  get "items/index"
-
-  get "items/edit"
-
-  get "items/show"
-
-  get "items/create"
-
-  get "items/update"
-
-  get "items/destroy"
+  resources :items
 
   devise_for :users
 
