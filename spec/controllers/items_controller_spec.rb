@@ -21,35 +21,35 @@ describe ItemsController do
 
     describe "GET 'edit'" do
       it "should deny access" do
-        get :edit
+        get :edit, :id => 1
         response.should redirect_to user_session_path
       end
     end
 
     describe "GET 'show'" do
       it "should deny access" do
-        get :show
+        get :show, :id => 1
         response.should redirect_to user_session_path
       end
     end
 
-    describe "GET 'create'" do
+    describe "POST 'create'" do
       it "should deny access" do
-        get :create
+        post :create
         response.should redirect_to user_session_path
       end
     end
 
-    describe "GET 'update'" do
+    describe "PUT 'update'" do
       it "should deny access" do
-        get :update
+        put :update, :id => 1
         response.should redirect_to user_session_path
       end
     end
 
-    describe "GET 'destroy'" do
+    describe "DELETE 'destroy'" do
       it "should deny access" do
-        get :destroy
+        delete :destroy, :id => 1
         response.should redirect_to user_session_path
       end
     end
@@ -64,54 +64,54 @@ describe ItemsController do
 
     describe "GET 'new'" do
       it "should be successful" do
-        get 'new'
+        get :new
         response.should be_success
       end
     end
 
     describe "GET 'index'" do
       it "should be successful" do
-        get 'index'
+        get :index
         response.should be_success
       end
 
 #      it "should list items" do
-#        get 'index'
+#        get :index
 #        response.should have_selector('ul#items')
 #      end
     end
 
     describe "GET 'edit'" do
       it "should be successful" do
-        get 'edit'
+        get :edit, :id => @user
         response.should be_success
       end
     end
 
     describe "GET 'show'" do
       it "should be successful" do
-        get 'show'
+        get :show, :id => @user
         response.should be_success
       end
     end
 
-    describe "GET 'create'" do
+    describe "POST 'create'" do
       it "should be successful" do
-        get 'create'
+        post :create
         response.should be_success
       end
     end
 
-    describe "GET 'update'" do
+    describe "PUT 'update'" do
       it "should be successful" do
-        get 'update'
+        put :update, :id => @user
         response.should be_success
       end
     end
 
-    describe "GET 'destroy'" do
+    describe "DELETE 'destroy'" do
       it "should be successful" do
-        get 'destroy'
+        delete :destroy, :id => @user
         response.should be_success
       end
     end
