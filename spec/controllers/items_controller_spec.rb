@@ -56,62 +56,66 @@ describe ItemsController do
   end
 
 
-#  describe 'signed in' do
-#
-#    describe "GET 'new'" do
-#      it "should be successful" do
-#        get 'new'
-#        response.should be_success
-#      end
-#    end
-#
-#    describe "GET 'index'" do
-#      it "should be successful" do
-#        get 'index'
-#        response.should be_success
-#      end
-#
+  describe 'signed in' do
+    before(:each) do
+      @user = Factory(:user)
+      sign_in @user
+    end
+
+    describe "GET 'new'" do
+      it "should be successful" do
+        get 'new'
+        response.should be_success
+      end
+    end
+
+    describe "GET 'index'" do
+      it "should be successful" do
+        get 'index'
+        response.should be_success
+      end
+
 #      it "should list items" do
 #        get 'index'
 #        response.should have_selector('ul#items')
 #      end
-#    end
-#
-#    describe "GET 'edit'" do
-#      it "should be successful" do
-#        get 'edit'
-#        response.should be_success
-#      end
-#    end
-#
-#    describe "GET 'show'" do
-#      it "should be successful" do
-#        get 'show'
-#        response.should be_success
-#      end
-#    end
-#
-#    describe "GET 'create'" do
-#      it "should be successful" do
-#        get 'create'
-#        response.should be_success
-#      end
-#    end
-#
-#    describe "GET 'update'" do
-#      it "should be successful" do
-#        get 'update'
-#        response.should be_success
-#      end
-#    end
-#
-#    describe "GET 'destroy'" do
-#      it "should be successful" do
-#        get 'destroy'
-#        response.should be_success
-#      end
-#    end
-#
-#  end
+    end
+
+    describe "GET 'edit'" do
+      it "should be successful" do
+        get 'edit'
+        response.should be_success
+      end
+    end
+
+    describe "GET 'show'" do
+      it "should be successful" do
+        get 'show'
+        response.should be_success
+      end
+    end
+
+    describe "GET 'create'" do
+      it "should be successful" do
+        get 'create'
+        response.should be_success
+      end
+    end
+
+    describe "GET 'update'" do
+      it "should be successful" do
+        get 'update'
+        response.should be_success
+      end
+    end
+
+    describe "GET 'destroy'" do
+      it "should be successful" do
+        get 'destroy'
+        response.should be_success
+      end
+    end
+
+  end
 
 end
