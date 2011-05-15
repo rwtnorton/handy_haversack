@@ -1,4 +1,6 @@
-<h1>Items</h1>
+<h1><%= @title %></h1>
 <ul id="items">
-  <!-- <li></li> -->
+  <% @items.each do |item| %>
+  <li><%= item.name %></li>
+  <% end %>
 </ul>
