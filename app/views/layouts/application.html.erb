@@ -8,6 +8,14 @@
 </head>
 <body>
 
+  <div id="panel">
+    <ul>
+      <% if user_signed_in? %>
+      <li><%= link_to 'Sign out', sign_out_path %></li>
+      <% end %>
+    </ul>
+  </div>
+
 <%= yield %>
 
 </body>
